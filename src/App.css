@@ -154,5 +154,8 @@
   .aboutCards{
     justify-content: center !important;
   }
+  .worksCardWidth{
+    width: 300px !important;
+  }
 }
 
