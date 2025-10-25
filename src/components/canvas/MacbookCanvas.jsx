@@ -1,5 +1,5 @@
 
-import React, { Suspense, useRef, useMemo } from "react";
+import React, { Suspense, useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Html, Environment, ContactShadows, OrbitControls, useGLTF, Preload } from "@react-three/drei";
 import * as THREE from "three";
@@ -57,7 +57,19 @@ const Model = React.memo((props) => {
 
 const MacbookCanvas = () => {
   const camera = useMemo(() => ({ position: [-5, 0, -15], fov: 55 }), []);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMedium, setIsMedium] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width <= 500);
+      setIsMedium(width > 500 && width <= 820);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="w-full h-full">
       <LazyCanvas rootMargin="300px">
@@ -72,7 +84,25 @@ const MacbookCanvas = () => {
           >
             <ambientLight intensity={0.6} />
             <pointLight position={[10, 10, 10]} intensity={1.2} />
-            <group scale={.9} rotation={[0, Math.PI * -1.12, 0]} position={[-7.5, -1.2, 0]}>
+            <group 
+            scale={isMobile ? .6 : isMedium ? .79 : .9}
+            rotation={
+              isMobile ? 
+              [0, Math.PI * -.99, 0] 
+              :
+              isMedium ?
+              [0, Math.PI * -.97, 0]
+              :
+              [0, Math.PI * -1.12, 0]} 
+            position={
+              isMobile ? 
+              [0, -1.4, 0] 
+              : 
+              isMedium ? 
+              [0, -1.6, 0]  
+              :
+              [-7.5, -1.2, 0]}
+            >
               <Model />
             </group>
 

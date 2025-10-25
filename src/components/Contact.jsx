@@ -1,10 +1,8 @@
-import React, {  lazy, Suspense, useRef, useState } from "react";
+import React, {  lazy, Suspense, useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react"
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-// import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import LazyCanvas from "./LazyCanvas";
@@ -12,61 +10,10 @@ const EarthCanvas = lazy(() => import("./canvas/Earth"));
 
 // eslint-disable-next-line react-refresh/only-export-components
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
 
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
-  };
 
   return (
     <div
@@ -80,8 +27,6 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
-          ref={formRef}
-          onSubmit={handleSubmit}
           className='mt-4 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
@@ -89,9 +34,8 @@ const Contact = () => {
             <input
               type='text'
               name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
+              value={''}
+              placeholder="What's your name?"
               className='bg-tertiary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -100,9 +44,8 @@ const Contact = () => {
             <input
               type='email'
               name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
+              value={''}
+              placeholder="What's your email?"
               className='bg-tertiary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -111,9 +54,8 @@ const Contact = () => {
             <textarea
               rows={3}
               name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What you want to say?'
+              value={''}
+              placeholder="What's your message?"
               className='bg-tertiary py-2 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>

@@ -150,4 +150,9 @@
     display: flex !important;
   }
 }
+@media (max-width: 820px) and (min-width: 600px) {
+  .aboutCards{
+    justify-content: center !important;
+  }
+}
 

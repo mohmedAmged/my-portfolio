@@ -23,7 +23,7 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I craft dynamic web experiences, <br className='sm:block hidden' />
             3D visuals, and interactive interfaces <br className='sm:block hidden' />
-            using React, Next.js, and Three.js
+            using React.js, Next.js, and Three.js
           </p>
         </div>
       </div>

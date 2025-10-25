@@ -38,7 +38,7 @@ const Navbar = () => {
           <img src={logo} alt='logo' className='w-19 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Mohamed Amged &nbsp;
-            <span className='sm:block hidden'> | ReactJs & NextJs Mastery</span>
+            <span className='sm:block hidden'> | ReactJs & NextJs Developer</span>
           </p>
         </Link>
 

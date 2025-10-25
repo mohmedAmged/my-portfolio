@@ -21,16 +21,10 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import valkii from "./company/valkii.jpeg"
 import eraasoft from "./company/Nav-Logo.svg"
 import freelance from "./company/freelance.jpg"
-import carrent from "./carrent.avif";
-import jobit from "./jobit.avif";
-import tripguide from "./tripguide.avif";
+
 import reach from "./reach (1).png"
 import ooners from "./ooners.png"
 import circle from "./circle.png"
@@ -57,13 +51,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
   valkii,
   eraasoft,
   freelance,
