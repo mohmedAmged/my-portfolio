@@ -1,7 +1,7 @@
 
 import { BrowserRouter } from 'react-router-dom';
 import './App.css'
-import  Navbar  from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import { lazy, Suspense } from 'react';
 const Hero = lazy(() => import("./components/Hero"));
 const About = lazy(() => import("./components/About"));
@@ -9,7 +9,7 @@ const Experience = lazy(() => import("./components/Experience"));
 const Tech = lazy(() => import("./components/Tech"));
 const Works = lazy(() => import("./components/Works"));
 const Contact = lazy(() => import("./components/Contact"));
-const StarsCanvas = lazy(() => import("./components/canvas/Stars")); 
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
           <Navbar />
           <Hero />
         </div>
-       <Suspense fallback={<div className="text-center text-white p-10">Loading…</div>}>
+        <Suspense fallback={<div className="text-center text-white p-10">Loading…</div>}>
           <About />
           <Experience />
           <Tech />
