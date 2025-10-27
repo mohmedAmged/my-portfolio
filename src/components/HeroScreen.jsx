@@ -1,101 +1,48 @@
-// src/components/HeroPage.jsx
 import React from "react";
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 
 const HeroPage = () => {
   return (
-    <div className="bg-primary text-white w-full h-auto overflow-y-auto overflow-y-scroll p-6 flex flex-col space-y-10">
-      
-      <section className="flex flex-col items-center text-center">
-        <motion.div variants={textVariant()}>
-          <p className={`${styles.sectionSubText} text-secondary`}>
-            Welcome to my portfolio
-          </p>
-          <h1 className={`${styles.heroHeadText} text-white text-3xl`}>
-            Hi, I'm <span className="text-[#915EFF]">Mohamed Amged</span>
+    <div className="bg-primary text-white w-full h-[auto] p-6 ">
+      <section className="flex flex-col justify-center items-center text-center">
+        {/* Name */}
+        <div>
+          <h1 className={`${styles.heroCanvasHeadText} text-white`}>
+            <span className="text-[#915EFF]">Mohamed Amged</span>
           </h1>
-          <p className="text-sm text-gray-400 mt-3 max-w-md mx-auto">
-            A full-stack developer passionate about interactive 3D experiences and crafting creative web applications.
-          </p>
-        </motion.div>
-      </section>
-      <motion.section
-        variants={fadeIn("up", "spring", 0.2, 0.75)}
-        className="bg-tertiary rounded-xl p-4 shadow-card"
-      >
-        <h2 className={`${styles.sectionHeadText} text-lg mb-3`}>
-          About Me
-        </h2>
-        <p className="text-secondary text-sm leading-relaxed">
-          I'm a developer with a strong passion for building immersive 3D and interactive web applications using modern frameworks like React, Three.js, and TailwindCSS.
-        </p>
-      </motion.section>
-
-      <motion.section
-        variants={fadeIn("up", "spring", 0.4, 0.75)}
-        className="bg-tertiary rounded-xl p-4 shadow-card"
-      >
-        <h2 className={`${styles.sectionHeadText} text-lg mb-3`}>
-          Featured Projects
-        </h2>
-        <div className="space-y-3">
-          {[
-            { name: "3D Portfolio", desc: "Interactive developer portfolio built with React Three Fiber." },
-            { name: "Valkii App", desc: "Multi-platform business app built for real-time communication." },
-          ].map((project, idx) => (
-            <div
-              key={idx}
-              className="bg-black-100 p-3 rounded-lg hover:bg-black-200 transition"
-            >
-              <h3 className="text-white font-medium text-sm">{project.name}</h3>
-              <p className="text-secondary text-xs">{project.desc}</p>
-            </div>
-          ))}
+          <p className="text-sm text-gray-400 mt-3 max-w-md mx-auto"> A full-stack developer passionate about interactive 3D experiences and crafting creative web applications. </p>
         </div>
-      </motion.section>
-      <motion.section
-        variants={fadeIn("up", "spring", 0.4, 0.75)}
-        className="bg-tertiary rounded-xl p-4 shadow-card"
-      >
-        <h2 className={`${styles.sectionHeadText} text-lg mb-3`}>
-          Featured Projects
-        </h2>
-        <div className="space-y-3">
-          {[
-            { name: "3D Portfolio", desc: "Interactive developer portfolio built with React Three Fiber." },
-            { name: "Valkii App", desc: "Multi-platform business app built for real-time communication." },
-          ].map((project, idx) => (
-            <div
-              key={idx}
-              className="bg-black-100 p-3 rounded-lg hover:bg-black-200 transition"
-            >
-              <h3 className="text-white font-medium text-sm">{project.name}</h3>
-              <p className="text-secondary text-xs">{project.desc}</p>
-            </div>
-          ))}
-        </div>
-      </motion.section>
-
-      <motion.section
-        variants={fadeIn("up", "spring", 0.6, 0.75)}
-        className="text-center"
-      >
-        <h2 className={`${styles.sectionHeadText} text-lg mb-2`}>
-          Let's Connect
-        </h2>
-        <p className="text-secondary text-sm mb-4">
-          Feel free to reach out for collaborations or project ideas.
-        </p>
-        <a
-          href="#contact"
-          className="inline-block bg-[#915EFF] hover:bg-[#7b4cd8] text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+        <div
+          className="flex gap-8 mt-4 text-3xl"
         >
-          Contact Me
+          <a href="mailto:mohamedamgad.dev@gmail.com" className="hover:text-[#b291fb] transition">
+            <i className="fa-solid fa-envelope"></i>
+          </a>
+
+          <a href="https://wa.me/201005322028" target="_blank" className="hover:text-[#b291fb] transition">
+            <i className="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="https://github.com/mohmedAmged" target="_blank" className="hover:text-[#b291fb] transition">
+            <i className="fa-brands fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/mohamedamged" target="_blank" className="hover:text-[#b291fb] transition">
+            <i className="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a href="https://www.tiktok.com/@harry.dev7" target="_blank" className="hover:text-[#b291fb] transition">
+            <i className="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+        <a
+          href="/mohamed-amgad-cv.pdf"
+          download
+          className="mt-10 bg-[#915EFF] hover:bg-[#7b4cd8] px-8 py-3 rounded-lg text-sm font-medium transition"
+        >
+          Download CV
         </a>
-      </motion.section>
+      </section>
     </div>
   );
 };
