@@ -3,7 +3,7 @@ import { styles } from "../styles";
 
 const HeroPage = () => {
   return (
-    <div className="bg-primary text-white w-full h-[auto] p-6 overflow-y-auto overflow-y-scroll ">
+    <div className="bg-primary text-white w-full h-[auto] p-6 ">
       <section className="flex flex-col justify-center items-center text-center">
  {/* Name */}
       <div>

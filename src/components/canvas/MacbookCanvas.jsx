@@ -32,7 +32,7 @@ const Model = React.memo((props) => {
               position={[0, .05, -0.09]}
               transform
               occlude
-              className="w-[335px] h-[216px] overflow-y-auto overflow-x-auto contentt"
+              className="w-[334px] h-[216px] overflow-y-auto overflow-x-auto contentt"
             >
               <MemoryRouter>
                 <div className="relative scale-[.5] w-[668px] h-[fit-content] bg-primary wrapperr"
