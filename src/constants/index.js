@@ -1,8 +1,8 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+  threeJs,
+  realTime,
+  frontend,
+  ui,
   javascript,
   typescript,
   html,
@@ -10,6 +10,12 @@ import {
   reactjs,
   redux,
   tailwind,
+  bootstrap,
+  mui,
+  postman,
+  sass,
+  vercel,
+  vite,
   git,
   figma,
   threejs,
@@ -18,7 +24,8 @@ import {
   freelance,
   reach,
   circle,
-  ooners
+  ooners,
+  burger
 } from "../assets";
 
 export const navLinks = [
@@ -27,8 +34,12 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "projects",
+    title:"Projects"
   },
   {
     id: "contact",
@@ -38,22 +49,27 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Frontend Engineer (React & Next.js)",
+    icon: frontend,
   },
   {
-    title: "React.js & Next.js Developer",
-    icon: mobile,
+    title: "UI Development & Responsive Design",
+    icon: ui,
   },
-  {
-    title: "UI/UX & Interactive Designer",
-    icon: creator,
-  },
+  // {
+  //   title: "Animations & Interactive Motion (GSAP)",
+  //   icon: creator,
+  // },
   {
     title: "3D Web Experiences (Three.js)",
-    icon: backend,
+    icon: threeJs,
+  },
+  {
+    title: "Real-Time Applications & API Integration",
+    icon: realTime,
   },
 ];
+
 const technologies = [
   {
     name: "HTML 5",
@@ -75,14 +91,27 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
+    {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
+    name: "Mui",
+    icon: mui,
+  },
+  {
+    name: "sass",
+    icon: sass,
+  },
   {
     name: "Redux Toolkit",
     icon: redux,
   },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
+
   {
     name: "Three JS",
     icon: threejs,
@@ -90,6 +119,18 @@ const technologies = [
   {
     name: "git",
     icon: git,
+  },
+   {
+    name: "postman",
+    icon: postman,
+  },
+  {
+    name: "vite",
+    icon: vite,
+  },
+  {
+    name: "vercel",
+    icon: vercel,
   },
   {
     name: "figma",
@@ -217,6 +258,32 @@ const projects = [
     image: ooners, 
     source_code_link: "https://github.com/mohmedAmged/Ooners-V01",
   },
+  {
+  name: "Burger Shop",
+  description:
+    "A high-impact burger restaurant website built with cinematic GSAP animations, responsive layouts, and smooth scroll-based interactions. Designed to highlight the menu with immersive visuals, fast performance, and a fully responsive experience using modern React workflows.",
+  tags: [
+    {
+      name: "react",
+      color: "blue-text-gradient",
+    },
+    {
+      name: "tailwind",
+      color: "green-text-gradient",
+    },
+    {
+      name: "gsap",
+      color: "pink-text-gradient",
+    },
+    {
+      name: "react-responsive",
+      color: "orange-text-gradient",
+    },
+  ],
+  image: burger, // replace with your burger project image import
+  source_code_link: "https://github.com/mohmedAmged/burger-shop",
+},
+
 ];
 
 

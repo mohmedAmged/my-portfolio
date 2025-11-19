@@ -2,7 +2,8 @@
 import { BrowserRouter } from 'react-router-dom';
 import './App.css'
 import Navbar from "./components/Navbar";
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import MainLoader from './components/MainLoader';
 const Hero = lazy(() => import("./components/Hero"));
 const About = lazy(() => import("./components/About"));
 const Experience = lazy(() => import("./components/Experience"));
@@ -13,10 +14,18 @@ const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
 function App() {
 
+const [isLoading, setIsLoading] = useState(true)
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setIsLoading(false)
+        }, 3800)
 
+        return () => clearTimeout(timer)
+      }, [])
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
+      { isLoading ? <MainLoader /> :
+        <div className='relative z-0 bg-primary'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center lazy-bg'>
           <Navbar />
           <Hero />
@@ -31,7 +40,8 @@ function App() {
             <StarsCanvas />
           </div>
         </Suspense>
-      </div>
+        </div>
+      }
     </BrowserRouter>
   )
 }

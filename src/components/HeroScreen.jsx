@@ -3,16 +3,13 @@ import { styles } from "../styles";
 
 const HeroPage = () => {
   return (
-    <div className="bg-primary text-white w-full h-[auto] p-6 ">
+    <div className="bg-primary text-white w-full h-[auto] p-6">
       <section className="flex flex-col justify-center items-center text-center">
  {/* Name */}
       <div>
         <h1 className={`${styles.heroCanvasHeadText} text-white`}>
           <span className="text-[#915EFF]">Mohamed Amged</span>
         </h1>
-        {/* <p className="text-secondary text-md mt-3">
-          Crafting smooth, interactive interfaces with modern web technologies.
-        </p> */}
         <p className="text-sm text-gray-400 mt-3 max-w-md mx-auto"> A full-stack developer passionate about interactive 3D experiences and crafting creative web applications. </p>
       </div>
 
