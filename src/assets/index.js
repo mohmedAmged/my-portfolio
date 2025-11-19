@@ -34,7 +34,6 @@ import ooners from "./ooners.png"
 import circle from "./circle.png"
 import burger from "./burger.png"
 
-
 export {
   logo,
   backend,

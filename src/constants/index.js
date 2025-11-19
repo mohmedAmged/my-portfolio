@@ -25,6 +25,9 @@ import {
 import bootstrap from "../assets/tech/bootstrap.png"
 import sass from "../assets/tech/sass.png"
 import mui from "../assets/tech/mui.png"
+import vite from "../assets/tech/vite.png"
+import vercel from "../assets/tech/vercel.png"
+import post from "../assets/tech/postman.png"
 
 export const navLinks = [
   {
@@ -122,6 +125,18 @@ const technologies = [
   {
     name: "figma",
     icon: figma,
+  },
+     {
+    name: "postman",
+    icon: post,
+  },
+  {
+    name: "vite",
+    icon: vite,
+  },
+  {
+    name: "vercel",
+    icon: vercel,
   },
 ];
 
