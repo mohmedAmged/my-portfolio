@@ -23,11 +23,11 @@ import {
  
 } from "../assets";
 import bootstrap from "../assets/tech/bootstrap.png"
-import sass from "../assets/tech/sass.png"
-import mui from "../assets/tech/mui.png"
-import vite from "../assets/tech/vite.png"
-import vercel from "../assets/tech/vercel.png"
-import post from "../assets/tech/postman.png"
+import sassImg from "../assets/tech/sassimg.png"
+import muiImg from "../assets/tech/muimg.png"
+import viteImg from "../assets/tech/vitimg.png"
+import verceImg from "../assets/tech/vercimg.png"
+import post from "../assets/tech/postimg.png"
 
 export const navLinks = [
   {
@@ -102,11 +102,11 @@ const technologies = [
   },
   {
     name: "Mui",
-    icon: mui,
+    icon: muiImg,
   },
   {
     name: "sass",
-    icon: sass,
+    icon: sassImg,
   },
   {
     name: "Redux Toolkit",
@@ -132,11 +132,11 @@ const technologies = [
   },
   {
     name: "vite",
-    icon: vite,
+    icon: viteImg,
   },
   {
     name: "vercel",
-    icon: vercel,
+    icon: verceImg,
   },
 ];
 

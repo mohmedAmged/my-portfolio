@@ -39,10 +39,10 @@ const TechCard = ({ index, title, icon }) => (
 const Tech = () => {
   return (
     <>
-     <motion.div variants={textVariant()}>
+     <div variants={textVariant()}>
         <p className={styles.sectionSubText}>Technologies I use</p>
         <h2 className={styles.sectionHeadText}>My Tech Stack.</h2>
-      </motion.div>
+      </div>
     <div className="mt-20 flex flex-wrap justify-center gap-8">
       {technologies.map((tech, index) => (
         <TechCard key={tech.name} index={index} title={tech.name} icon={tech?.icon} />
