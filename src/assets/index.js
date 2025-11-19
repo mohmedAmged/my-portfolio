@@ -22,12 +22,6 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import bootstrap from "./tech/bootstrap.png";
-import mui from "./tech/MaterialUI.png";
-import postman from "./tech/Postman.png";
-import sass from "./tech/sass.png";
-import vite from "./tech/vite.png";
-import vercel from "./tech/Vercel.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
@@ -39,6 +33,7 @@ import reach from "./reach (1).png"
 import ooners from "./ooners.png"
 import circle from "./circle.png"
 import burger from "./burger.png"
+
 
 export {
   logo,
@@ -56,12 +51,6 @@ export {
   css,
   docker,
   figma,
-  bootstrap,
-  sass,
-  mui,
-  vite,
-  postman,
-  vercel,
   git,
   html,
   javascript,
@@ -78,5 +67,5 @@ export {
   reach,
   ooners,
   circle,
-  burger
+  burger,
 };

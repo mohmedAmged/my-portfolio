@@ -10,12 +10,6 @@ import {
   reactjs,
   redux,
   tailwind,
-  bootstrap,
-  mui,
-  postman,
-  sass,
-  vercel,
-  vite,
   git,
   figma,
   threejs,
@@ -25,8 +19,12 @@ import {
   reach,
   circle,
   ooners,
-  burger
+  burger,
+ 
 } from "../assets";
+import bootstrap from "../assets/tech/bootstrap.png"
+import sass from "../assets/tech/sass.png"
+import mui from "../assets/tech/mui.png"
 
 export const navLinks = [
   {
@@ -120,18 +118,7 @@ const technologies = [
     name: "git",
     icon: git,
   },
-   {
-    name: "postman",
-    icon: postman,
-  },
-  {
-    name: "vite",
-    icon: vite,
-  },
-  {
-    name: "vercel",
-    icon: vercel,
-  },
+
   {
     name: "figma",
     icon: figma,

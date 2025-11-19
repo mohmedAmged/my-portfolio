@@ -17,12 +17,12 @@ const TechCard = ({ index, title, icon }) => (
     transitionSpeed={450}
   >
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.3, 0.75)}
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div className="bg-tertiary rounded-[20px] py-5 px-6 min-h-[220px] flex justify-evenly items-center flex-col">
         <img
-          src={icon}
+          src={icon ? icon : ''}
           alt={title}
           loading="lazy"
           className="w-16 h-16 object-contain"
@@ -45,7 +45,7 @@ const Tech = () => {
       </motion.div>
     <div className="mt-20 flex flex-wrap justify-center gap-8">
       {technologies.map((tech, index) => (
-        <TechCard key={tech.name} index={index} title={tech.name} icon={tech.icon} />
+        <TechCard key={tech.name} index={index} title={tech.name} icon={tech?.icon} />
       ))}
     </div>
     </>
@@ -53,4 +53,4 @@ const Tech = () => {
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
-export default SectionWrapper(Tech, "");
+export default SectionWrapper(Tech, "skills");
